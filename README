@@ -1,0 +1,24 @@
+   This is a very early stage of an Active shutter 3D homebrew system
+Compose of a transmitter (expected to be connected to a computer one day)
+that is made of Longan Nano (GD32VF103CBT6 Risc-V microcontroller) nowadays
+just sending a sync signal thow a FS1000A 433Mhz transmitter.
+The other component is the receiver, made of an Alhambra II (iCE40HX4K-TQ144
+FPGA Development Board) connected to a RF-5V 433Mhz receiver on one side and
+to the left and right shutter in the other (Connected throw external
+transistor circuit for handle the 8V that it needs).
+
+The receiver is already working, it get a sync signal, calculate the period
+time and open-close the lens during one cycle (half cycle per lens), doesn't
+matter the frequency between 1KHZ and 4HZ, the frequency can change
+dynamically and the FPGA will adapt to it.
+
+The transmitter is just sending a sync signal while switch on a led for
+test that glases are sync and the led light cam be seen just from one of the
+lens.
+
+TODO:
+
+In the transmitter side, A lot...
+Would be nice to modify the FBDEV module for send a signal throw the USB
+from while to while with screen refresh rate and start of it, then the
+Risc-V can get it and compose the signal.

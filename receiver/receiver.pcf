@@ -1,0 +1,14 @@
+set_io signal 9
+set_io detect[0] 45
+set_io detect[1] 44
+set_io detect[2] 43
+set_io detect[3] 42
+set_io detect[4] 41
+set_io detect[5] 39
+set_io detect[6] 38
+set_io detect[7] 37
+
+set_io l_right 1
+set_io l_left 2
+
+set_io clk 49 #CLK input pin
