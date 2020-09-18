@@ -1,0 +1,6 @@
+doc/ * linguist-vendored
+receiver/*.asc linguist-vendored
+receiver/*.bin linguist-vendored
+receiver/*.json linguist-vendored
+receiver/*.pcf linguist-vendored
+transmitter/*.ini linguist-vendored
