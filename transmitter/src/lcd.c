@@ -162,7 +162,7 @@ void spi_config(void)
 #endif
 
 
-void Lcd_Init(void)
+void lcd_init(void)
 {
 	rcu_periph_clock_enable(RCU_GPIOA);
 	rcu_periph_clock_enable(RCU_GPIOB);

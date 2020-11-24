@@ -89,7 +89,7 @@ void LCD_WR_DATA8(u8 dat);
 void LCD_WR_DATA(u16 dat);
 void LCD_WR_REG(u8 dat);
 void LCD_Address_Set(u16 x1,u16 y1,u16 x2,u16 y2);
-void Lcd_Init(void);
+void lcd_init(void);
 void LCD_Clear(u16 Color);
 void LCD_ShowChinese(u16 x,u16 y,u8 index,u8 size,u16 color);
 void LCD_DrawPoint(u16 x,u16 y,u16 color);

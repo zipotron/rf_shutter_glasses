@@ -9,9 +9,12 @@ int main(void)
 	int c=0;
 	uint16_t analog_read = 0;
 	
-	Lcd_Init();
+	lcd_init();
     led_init();
     signal_pin_init();
+    init_ADC();
+    
+    LCD_Clear(BLACK);
     
     for(;;){
 		analog_read = ADC_RDATA(ADC0);
@@ -21,8 +24,8 @@ int main(void)
 		
 		led_set(c);
 		pin_set(c);
-		//delay_1ms(50);
-		delay_1ms(analog_read + 30);
+		delay_1ms(30);
+		
 		c++;
 		if(c==2)
 			c=0;
