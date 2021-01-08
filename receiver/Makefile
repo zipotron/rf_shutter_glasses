@@ -22,6 +22,12 @@ receiver.bin: receiver.v receiver.pcf
 flash:
 	iceprog -d i:0x0403:0x6010:0 receiver.bin
 
+diagram:
+	yosys -p 'prep -top receiver; write_json receiver.json' receiver.v signal.v toolkit.v
+	
+schematic:
+	yosys -p 'prep -top receiver -flatten; write_json receiver.json' receiver.v signal.v toolkit.v
+	
 clean:
 	rm -f *.bin *.asc *.json *.out *.vcd *~
 
